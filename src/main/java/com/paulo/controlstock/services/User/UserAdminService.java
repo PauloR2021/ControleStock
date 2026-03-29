@@ -9,13 +9,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
-public class UserService {
+public class UserAdminService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository,  PasswordEncoder passwordEncoder) {
+    public UserAdminService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
@@ -45,6 +47,14 @@ public class UserService {
     public ResponseUserDTO getLoggedUser(UserModel loggedUser){
         return toResponse(loggedUser);
 
+    }
+
+    @Transactional
+    public List<ResponseUserDTO> findAll(){
+        return userRepository.findAll()
+                .stream()
+                .map(this::toResponse)
+                .toList();
     }
 
 
