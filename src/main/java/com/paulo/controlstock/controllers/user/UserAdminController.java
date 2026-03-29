@@ -5,10 +5,8 @@ import com.paulo.controlstock.dtos.user.RequestUserDTO;
 import com.paulo.controlstock.dtos.user.ResponseUserDTO;
 import com.paulo.controlstock.infra.security.SecurityConfiguration;
 import com.paulo.controlstock.models.user.UserModel;
-import com.paulo.controlstock.services.User.UserService;
+import com.paulo.controlstock.services.User.UserAdminService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -16,18 +14,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("/user/admin")
 @SecurityRequirement(name = SecurityConfiguration.SECURITY)
 public class UserAdminController {
 
-    private final UserService userService;
+    private final UserAdminService userAdminService;
 
 
-    public UserAdminController(UserService userService) {
-        this.userService = userService;
+    public UserAdminController(UserAdminService userAdminService) {
+        this.userAdminService = userAdminService;
     }
 
     @PostMapping
@@ -36,13 +34,22 @@ public class UserAdminController {
             @RequestBody
             @Valid RequestUserDTO dto)
     {
-        ResponseUserDTO response = userService.createUser(dto);
+        ResponseUserDTO response = userAdminService.createUser(dto);
 
         ResponseApiControl<ResponseUserDTO> apiResponse =
                 new ResponseApiControl<>(true,"User create success",response, HttpStatus.CREATED.value());
 
         return ResponseEntity.ok(apiResponse);
 
+    }
+    @GetMapping()
+    @Operation(summary = "Rota para listar todos os usuários", description = "Rota que retorna todos os usuários do banco")
+    public ResponseEntity<ResponseApiControl<List<ResponseUserDTO>>> getUsers(){
+        List<ResponseUserDTO> response = userAdminService.findAll();
+
+        ResponseApiControl<List<ResponseUserDTO>> apiResponse =
+                new ResponseApiControl<>(true,"Todos Usuários",response,HttpStatus.OK.value());
+        return ResponseEntity.ok(apiResponse);
     }
 
     @GetMapping("/me")
@@ -54,11 +61,14 @@ public class UserAdminController {
                 .getAuthentication()
                 .getPrincipal();
 
-        ResponseUserDTO response = userService.getLoggedUser(user);
+        ResponseUserDTO response = userAdminService.getLoggedUser(user);
 
         ResponseApiControl<ResponseUserDTO> apiReponse =
                 new ResponseApiControl<>(true,"User get success",response, HttpStatus.OK.value());
 
         return ResponseEntity.ok(apiReponse);
     }
+
+
+
 }
