@@ -5,7 +5,7 @@ import com.paulo.controlstock.dtos.user.RequestUserDTO;
 import com.paulo.controlstock.dtos.user.ResponseUserDTO;
 import com.paulo.controlstock.infra.security.SecurityConfiguration;
 import com.paulo.controlstock.models.user.UserModel;
-import com.paulo.controlstock.services.User.UserAdminService;
+import com.paulo.controlstock.services.user.UserAdminService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
