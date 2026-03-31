@@ -1,4 +1,4 @@
-package com.paulo.controlstock.services.User;
+package com.paulo.controlstock.services.user;
 
 import com.paulo.controlstock.dtos.user.RequestUserDTO;
 import com.paulo.controlstock.dtos.user.ResponseUserDTO;
