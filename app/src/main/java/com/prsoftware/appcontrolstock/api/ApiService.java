@@ -2,6 +2,7 @@ package com.prsoftware.appcontrolstock.api;
 
 import com.prsoftware.appcontrolstock.dto.login.LoginRequest;
 import com.prsoftware.appcontrolstock.dto.login.LoginResponse;
+import com.prsoftware.appcontrolstock.dto.user.UserRequest;
 import com.prsoftware.appcontrolstock.dto.user.UserResponseApi;
 
 import retrofit2.Call;
@@ -20,4 +21,8 @@ public interface ApiService {
     //Endpoint de GetMyUser
     @GET("user/admin/me")
     Call<UserResponseApi> getUser(@Header("Authorization") String token);
+
+
+    @POST("user/admin")
+    Call<UserResponseApi> postCreateUser(@Body UserRequest request, @Header("Authorization") String token);
 }
