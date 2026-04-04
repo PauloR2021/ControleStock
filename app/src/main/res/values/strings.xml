@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">APP Control Stock</string>
+    <string name="app_titulo">Control Stock</string>
+    <string name="app_header_titulo">Usuário Controle</string>
+    <string name="open">Open</string>
+    <string name="Close">Close</string>
+    <string name="txtView2">Usuário</string>
+    <string name="txtView3">Senha</string>
+    <string name="txtHeader">Control Stock</string>
+    <string name="homeButtonLogout">Logout</string>
+    <string name="homeButtonUsers">Usuários</string>
+    <string name="homeButtonProducts">Produtos</string>
+    <string name="homeButtonStock">Estoque</string>
+    <string name="homeButtonReport">Relatórios</string>
+    <string name="homeButtonFinancial">Controle Financeiro</string>
+    <string name="txtByAuthor">By:Paulo Ricardo</string>
+    <string name="title_activity_usuario">UsuarioActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    
+    <!-- Strings da Tela de Usuário-->
+    <string name="nav_meu_usuario">Meu Usuário</string>
+    <string name="voltar">Voltar</string>
+    <string name="my_user_id">ID de Usuário</string>
+    <string name="my_user_name">Nome</string>
+    <string name="my_user_username">Usuário</string>
+    <string name="my_user_role">Acesso</string>
+
+
+    <string name="nav_create">Criar Usuário</string>
+</resources>
