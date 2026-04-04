@@ -59,7 +59,7 @@ public class MyUserFragment extends Fragment {
             @Override
             public void onResponse(Call<UserResponseApi> call, Response<UserResponseApi> response) {
 
-                //Verifica se tem retrono da API
+                //Verifica se tem retorno da API
                 if(response.isSuccessful() && response.body() != null){
 
                     //Pega o Retorno da API e joga para a Classe de Retorno, passando o corpo do response
