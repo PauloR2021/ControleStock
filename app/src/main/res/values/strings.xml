@@ -31,6 +31,19 @@
     <string name="my_user_username">Usuário</string>
     <string name="my_user_role">Acesso</string>
 
-
+    <!-- String da Tela de Criar Usuário-->
     <string name="nav_create">Criar Usuário</string>
+    <string name="titulo_tela_create">Novo Usuário</string>
+    <string name="create_name">Nome</string>
+    <string name="hint_nome">Nome</string>
+    <string name="create_username">Usuário</string>
+    <string name="hint_username">Usuário</string>
+    <string name="create_password">Senha</string>
+    <string name="hint_password">Senha</string>
+    <string name="create_role">Acesso</string>
+    <string name="radio_admin">ADMIN</string>
+    <string name="radio_user">USER</string>
+
+    <string name="btn_cadastrar">Cadastrar</string>
+
 </resources>
