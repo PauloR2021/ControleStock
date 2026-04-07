@@ -23,10 +23,27 @@
     <string name="action_settings">Settings</string>
     <string name="menu_home">Home</string>
     <string name="item_nav_listUser">Todos Usuários</string>
+    <string name="item_home_user">Home</string>
+
+    <!-- String da tela de Login-->
+    <string name="text_subTitulo_login">Faça login para acessar o sistema</string>
+    <string name="text_button_login">Entrar</string>
 
     <!-- String da tela Home -->
     <string name="text_titulo">Painel de Controle</string>
     <string name="text_subTitulo">"Gerencie usuários, estoque e acesso ao sistema"</string>
+
+    <!-- String da Tela de Home User -->
+    <string name="txt_titulo_home">APP Control Stock</string>
+    <string name="txt_descricao">Este aplicativo foi desenvolvido para controle de estoque e gerenciamento de usuários.</string>
+    <string name="txt_projeto">Projeto</string>
+    <string name="txt_projeto_subtitulo">Sistema de Controle de Estoque</string>
+    <string name="txt_desenvolvedor">Desenvolvedor</string>
+    <string name="txt_autor">Autor</string>
+    <string name="txt_area">Módulo Atual</string>
+    <string name="txt_area_controle">Controle de Usuários</string>
+    <string name="txt_versao">Versão do Aplicativo</string>
+    <string name="txt_v">v1.0.0"</string>
 
     <!-- Strings da Tela de Usuário-->
     <string name="nav_meu_usuario">Meu Usuário</string>
@@ -56,5 +73,7 @@
     <string name="list_name">Name</string>
     <string name="list_username">Username</string>
     <string name="list_role">Acesso</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

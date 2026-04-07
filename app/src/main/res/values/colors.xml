@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Cores tela Login-->
+    <color name="background_login">#F6F8FB</color>
+    <color name="text_primary_login">#111827</color>
+    <color name="text_secundary_login">#6B7280</color>
+    <color name="card_login">#FFFFFF</color>
+    <color name="stroke_card_login">#E5E7EB</color>
+
+    <!-- Cores Tela Home -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#188FEF</color>
