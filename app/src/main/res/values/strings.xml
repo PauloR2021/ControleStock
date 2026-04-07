@@ -22,7 +22,8 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="menu_home">Home</string>
-    
+    <string name="item_nav_listUser">Todos Usuários</string>
+
     <!-- Strings da Tela de Usuário-->
     <string name="nav_meu_usuario">Meu Usuário</string>
     <string name="voltar">Voltar</string>
@@ -45,5 +46,11 @@
     <string name="radio_user">USER</string>
 
     <string name="btn_cadastrar">Cadastrar</string>
+
+    <!-- String da Tela de list User-->
+    <string name="list_id">ID</string>
+    <string name="list_name">Name</string>
+    <string name="list_username">Username</string>
+    <string name="list_role">Acesso</string>
 
 </resources>
