@@ -24,6 +24,10 @@
     <string name="menu_home">Home</string>
     <string name="item_nav_listUser">Todos Usuários</string>
 
+    <!-- String da tela Home -->
+    <string name="text_titulo">Painel de Controle</string>
+    <string name="text_subTitulo">"Gerencie usuários, estoque e acesso ao sistema"</string>
+
     <!-- Strings da Tela de Usuário-->
     <string name="nav_meu_usuario">Meu Usuário</string>
     <string name="voltar">Voltar</string>

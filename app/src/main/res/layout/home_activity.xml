@@ -5,51 +5,107 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_home"
     tools:context=".HomeActivity">
 
-    <LinearLayout
-        android:layout_width="380dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/text_titulo"
+        android:textColor="@color/text_primary"
+        android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="51dp"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+    <TextView
+        android:id="@+id/txtSubtitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_subTitulo"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/txtTitulo"
+        app:layout_constraintStart_toStartOf="@id/txtTitulo"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        app:cardBackgroundColor="@color/card_white"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSubtitulo"
+        app:strokeColor="@color/stroke_card"
+        app:strokeWidth="1dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonUsuarios"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
-            android:layout_marginBottom="4dp"
+            android:layout_height="56dp"
             android:text="@string/homeButtonUsers"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_myplaces"
+            app:iconPadding="12dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonEstoque"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/homeButtonStock" />
-        <Button
+            android:layout_height="56dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/homeButtonStock"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_agenda"
+            app:iconPadding="12dp" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonLogout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/homeButtonLogout"/>
-
+            android:layout_height="56dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/homeButtonLogout"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_lock_power_off"
+            app:iconPadding="12dp" />
 
     </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="129dp"
-        android:layout_height="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:text="@string/txtByAuthor"
+        android:textColor="#9CA3AF"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.943"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/cardMenu"
+        app:layout_constraintStart_toStartOf="@id/cardMenu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
