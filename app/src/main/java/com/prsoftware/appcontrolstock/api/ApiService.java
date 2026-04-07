@@ -2,6 +2,7 @@ package com.prsoftware.appcontrolstock.api;
 
 import com.prsoftware.appcontrolstock.dto.login.LoginRequest;
 import com.prsoftware.appcontrolstock.dto.login.LoginResponse;
+import com.prsoftware.appcontrolstock.dto.user.ListResponseApi;
 import com.prsoftware.appcontrolstock.dto.user.UserRequest;
 import com.prsoftware.appcontrolstock.dto.user.UserResponseApi;
 
@@ -25,4 +26,7 @@ public interface ApiService {
 
     @POST("user/admin")
     Call<UserResponseApi> postCreateUser(@Body UserRequest request, @Header("Authorization") String token);
+
+    @GET("user/admin")
+    Call<ListResponseApi> getAllUser (@Header("Authorization") String token);
 }
