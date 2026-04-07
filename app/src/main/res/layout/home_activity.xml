@@ -14,7 +14,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="51dp">
+        tools:layout_editor_absoluteY="51dp"
+        tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/buttonUsuarios"
@@ -30,42 +31,13 @@
             android:id="@+id/buttonEstoque"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:text="@string/homeButtonStock" />
-
-        <Button
-            android:id="@+id/buttonRelatorio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="1dp"
-            android:text="@string/homeButtonReport"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/buttonProdutos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="1dp"
-            android:text="@string/homeButtonProducts"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/buttonControleFinanceiro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="1dp"
-            android:text="@string/homeButtonFinancial" />
-
         <Button
             android:id="@+id/buttonLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/homeButtonLogout" />
+            android:text="@string/homeButtonLogout"/>
+
 
     </LinearLayout>
 
