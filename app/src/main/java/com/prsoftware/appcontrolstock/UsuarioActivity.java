@@ -36,7 +36,7 @@ public class UsuarioActivity extends AppCompatActivity {
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_my_user, R.id.nav_create)
+                R.id.nav_home_user,R.id.nav_my_user, R.id.nav_create, R.id.nav_listUser)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_usuario);
